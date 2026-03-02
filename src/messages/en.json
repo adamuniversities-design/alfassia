@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "shop": "Shop",
+    "about": "Our Story",
+    "contact": "Contact",
+    "cart": "Cart",
+    "admin": "Admin"
+  },
+  "hero": {
+    "tagline": "Luxury Born from Heritage",
+    "subtitle": "Rare Moroccan ingredients. Centuries of tradition. Uncompromising quality.",
+    "cta": "Explore the Collection",
+    "scrollHint": "Scroll to discover"
+  },
+  "shop": {
+    "title": "The Collection",
+    "subtitle": "Each piece tells the story of Morocco's finest traditions",
+    "filters": {
+      "all": "All",
+      "perfume": "Perfumes",
+      "beauty": "Beauty",
+      "spices": "Spices",
+      "wellness": "Wellness"
+    },
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "viewDetails": "View Details"
+  },
+  "product": {
+    "price": "Price",
+    "quantity": "Quantity",
+    "addToCart": "Add to Cart",
+    "description": "Description",
+    "ingredients": "Ingredients",
+    "origin": "Origin",
+    "relatedProducts": "You May Also Like"
+  },
+  "cart": {
+    "title": "Your Selection",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to Checkout",
+    "remove": "Remove",
+    "orderSummary": "Order Summary"
+  },
+  "checkout": {
+    "success": {
+      "title": "Order Confirmed",
+      "message": "Thank you for your order. You will receive a confirmation email shortly.",
+      "backToShop": "Continue Shopping"
+    },
+    "cancel": {
+      "title": "Order Cancelled",
+      "message": "Your order was not completed. Your cart has been saved.",
+      "retry": "Try Again"
+    }
+  },
+  "footer": {
+    "tagline": "Alfassia Allhurra — Where Heritage Meets Luxury",
+    "links": "Quick Links",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved."
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "orders": "Orders",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "revenue": "Total Revenue",
+    "totalOrders": "Total Orders",
+    "pendingOrders": "Pending Orders",
+    "activeProducts": "Active Products",
+    "status": {
+      "PENDING": "Pending",
+      "PAID": "Paid",
+      "PROCESSING": "Processing",
+      "SHIPPED": "Shipped",
+      "DELIVERED": "Delivered",
+      "CANCELLED": "Cancelled"
+    }
+  },
+  "meta": {
+    "siteName": "Alfassia Allhurra",
+    "homeTitle": "Luxury Moroccan Products | Alfassia Allhurra",
+    "homeDesc": "Discover rare Moroccan luxury products — authentic Oud perfumes, pure Argan oil, Saffron from Taliouine, and more. Free shipping worldwide."
+  }
+}

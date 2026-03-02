@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brass: #b8902a;
+  --brass-light: #d4a840;
+  --brass-pale: #e8d5a0;
+  --black-deep: #0a0a0a;
+  --black-card: #111111;
+  --black-border: #222222;
+  --cream: #f5f0e8;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black-deep); }
+::-webkit-scrollbar-thumb { background: var(--brass); border-radius: 2px; }
+
+/* Selection */
+::selection { background: var(--brass); color: var(--black-deep); }
+
+/* Base */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-jost), sans-serif;
+  background: var(--black-deep);
+  color: var(--cream);
+  antialiased: true;
+}
+
+[lang="ar"] body, [lang="ar"] h1, [lang="ar"] h2, [lang="ar"] h3, [lang="ar"] p {
+  font-family: var(--font-amiri), serif;
+}
+
+/* Typography */
+.display {
+  font-family: var(--font-cormorant), serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+[dir="rtl"] .display {
+  font-family: var(--font-amiri), serif;
+}
+
+/* Brass divider */
+.brass-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brass), transparent);
+}
+
+[dir="rtl"] .brass-divider {
+  background: linear-gradient(270deg, transparent, var(--brass), transparent);
+}
+
+/* Luxury card */
+.luxury-card {
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.luxury-card:hover {
+  border-color: var(--brass);
+}
+
+/* Brass button */
+.btn-brass {
+  background: linear-gradient(135deg, var(--brass) 0%, var(--brass-light) 50%, var(--brass) 100%);
+  background-size: 200% 100%;
+  color: var(--black-deep);
+  font-family: var(--font-jost), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-position 0.4s ease, transform 0.2s ease;
+}
+
+.btn-brass:hover {
+  background-position: right center;
+  transform: translateY(-1px);
+}
+
+.btn-outline-brass {
+  background: transparent;
+  color: var(--brass);
+  border: 1px solid var(--brass);
+  font-family: var(--font-jost), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-brass:hover {
+  background-color: var(--brass);
+  color: var(--black-deep);
+}
+
+/* Grain overlay */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+/* Shimmer skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #222 37%, #1a1a1a 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fade animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up { animation: fadeUp 0.7s ease forwards; }
+.animate-fade-in { animation: fadeIn 0.5s ease forwards; }
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Hero geometric line decoration */
+.geo-line {
+  position: absolute;
+  background: var(--brass);
+  opacity: 0.3;
+}
