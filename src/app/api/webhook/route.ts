@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
           currency: session.currency?.toUpperCase() ?? 'MAD',
           customerEmail: session.customer_details?.email ?? '',
           customerName: session.customer_details?.name ?? '',
-          shippingAddress: session.shipping_details?.address ?? {},
+         shippingAddress: (session.shipping_details?.address as any) ?? {},
           items: {
             create: items.map((item) => ({
               productId: item.id,
