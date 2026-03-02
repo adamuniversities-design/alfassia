@@ -9,11 +9,8 @@ import type { Metadata } from 'next';
 type Props = { params: { locale: string; slug: string } };
 
 export async function generateStaticParams() {
-  const products = await prisma.product.findMany({ select: { slug: true } });
-  const locales = ['en', 'fr', 'ar'];
-  return products.flatMap((p) => locales.map((locale) => ({ locale, slug: p.slug })));
+  return [];
 }
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = await prisma.product.findUnique({ where: { slug: params.slug } });
   if (!product) return {};
